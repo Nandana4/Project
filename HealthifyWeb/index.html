@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HealthifyWeb</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('bg.png');
+  min-height: 100%;
+  height: 400px;
+}
+
+/* Each state */
+
+a:visited { text-decoration: none;}
+a:hover { text-decoration: none;  }
+a:focus { text-decoration: none;  }
+a:hover, a:active { text-decoration: none; }
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" style="position: relative;" id="home">
+    <div>
+        <div style="display: flex;flex-direction: columns;gap: 40px;" id="myNavbar">
+          <a  href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+         
+          </a>
+          <a href="#home" > HOME</a>
+          <a href="#about"><i class="fa fa-user"></i> ABOUT</a>
+          <a href="./login/login.html" ><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</a>
+          <a href="./registration/registeration.html"><i class="fa fa-address-book" aria-hidden="true"></i> SIGN UP</a>
+          </a>
+        </div>
+      
+      </div>
+      
+  <div style="    font-size: 64px;
+  white-space: nowrap;
+  top: 40%;
+  left: 10%;
+  text-align: center;
+  font-weight: 700;
+  width: 80%;
+  position: absolute;
+  z-index: 10;position: absolute;">
+    <span>HEALTHYWEB</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div style="padding:64px;justify-content: center; text-align: center;" id="about">
+  <h3 >ABOUT US</h3>
+  <p ><em>Lets join hands and work collectively to attain our goals!</em></p>
+  <p>Health is the biggest wealth for a human being in his/her entire lifetime. Health is God's gift to us. To stay healthy is not an option but a necessity to live a happy life.</p>
+  <div >
+    <div>
+      <p><b><i class="fa fa-user w3-margin-right"></i> Created by Nandana Dinesh Nair</b></p><br>
+      <img src="https://www.bhgre.com/bhgrelife/wp-content/uploads/2021/07/BHGRE-Blog-Image-Healthy-Family-Meals-to-Encourage-Coming-Together.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div>
+        <p>Ever wondered Am I healthy ?
+            Many people judge their fitness by how much they weigh . However weight is not always an accurate measure of fitness because muscles as much as or more than fat. If you want to truly get fit , you need to take your body mass index into consideration.</p>
+        <p>Body Mass Index (BMI)
+            BMI is a useful measure of overweight and obesity. It is calculated from your height and weight. 
+            BMI is an estimate of body fat and a good gauge of your risk for diseases that can occur with more body 
+            fat. The higher your BMI, the higher your risk for certain diseases such as heart
+             disease, high blood pressure, type 2 diabetes, gallstones, breathing problems, and 
+             certain cancers.</p>
+             <p>Healthify web is a friendly reminder for you to treat you better .
+                Check how healthy you are by measuring your BMI and choose a healthier living.</p>
+    </div>
+  </div>
+
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
